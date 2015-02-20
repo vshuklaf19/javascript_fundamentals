@@ -42,3 +42,53 @@ function helloWorld(langCode) {
 
 helloWorld("potato");
 helloWorld("ger");
+
+// EXERCISE: The Grade Assigner
+
+// Write a function named assignGrade that:
+// takes 1 argument, a number score.
+// returns a grade for the score, either "A", "B", "C", "D", or "F".
+// Call that function for a few different scores and log the result to make sure it works.
+
+function assignGrade(numberScore) {
+  if (numberScore >= 80) {
+    return "A";
+  }
+  else if (80 > numberScore  && numberScore >= 70) {
+    return "B";
+  }
+  else if (70 > numberScore && numberScore >= 60) {
+    return "C";
+  }
+  else if (60 > numberScore && numberScore >= 50) {
+    return "D";
+  }
+  else {
+    return "F";
+  }
+};
+
+assignGrade(34);
+assignGrade(65);
+assignGrade(89);
+assignGrade(51);
+
+// EXERCISE: The Pluralizer
+
+// Write a function named pluralize that:
+// takes 2 arguments, a noun and a number.
+// returns the number and pluralized form, like "5 cats" or "1 dog".
+// Call that function for a few different scores and log the result to make sure it works.
+// Bonus: Make it handle a few collective nouns like "sheep" and "geese".
+
+function pluralize(noun, number) {
+  if (number === 1) {
+    return number + " " + noun;
+  }
+  else {
+    return number + " " + noun + "s";
+  }
+};
+
+pluralize("parrot", 3);
+pluralize("chocolate", 1);
